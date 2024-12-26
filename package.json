@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:packages": "pnpm --filter './packages/**' build",
+    "build:packages": "pnpm --filter \"./packages/**\" build",
     "dev": "pnpm build:packages &&  concurrently -n my-app -c green,magenta \"pnpm dev:my-app\" \"pnpm dev:p1\"",
-    "dev:p1": "pnpm --filter '@exper/p1' dev",
-    "dev:my-app": "pnpm --filter '@exper/my-app' dev",
-    "copy-other": "pnpm --filter '@exper/p1' build:copy-other"
+    "dev:p1": "pnpm --filter \"@exper/p1\" dev",
+    "dev:my-app": "pnpm --filter \"@exper/my-app\" dev",
+    "copy-other": "pnpm --filter \"@exper/p1\" build:copy-other"
   },
   "keywords": [],
   "author": "",
