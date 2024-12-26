@@ -7,5 +7,7 @@ The "main" branch is setup to show a working project.  The p1 package has a sing
 The "export_template" branch shows Vite/Aurelia failing to load the html
 
 To run the project
+```bash
 pnpm install
 pnpm dev
+```
