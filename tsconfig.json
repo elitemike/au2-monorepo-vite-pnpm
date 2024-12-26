@@ -8,17 +8,25 @@
         "resolveJsonModule": true,
         "importHelpers": true,
         "sourceMap": true,
-        "outDir": "./dist"
+        "strict": false,
+        "allowJs": true,
+        "emitDecoratorMetadata": false,
+        "experimentalDecorators": false,
+        "forceConsistentCasingInFileNames": true,
+        "incremental": true,
+        "noEmitOnError": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": false,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noUncheckedIndexedAccess": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "preserveWatchOutput": true,
+        "removeComments": true,
+        "strictPropertyInitialization": false
     },
-    // "exports": {
-    //   ".": {
-    //     "import": "./dist/index.js"
-    //   }
-    // },
-    "include": [
-        "src"
-    ],
-    // "files": [
-    //   "src/resource.d.ts"
-    // ],
+    "exclude": [
+        "node_modules"
+    ]
 }

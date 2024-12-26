@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build:my-app": "pnpm build:packages && pnpm --filter \"@exper/my-app\" build",
     "build:packages": "pnpm --filter \"./packages/**\" build",
     "watch:my-app": "pnpm build:packages && concurrently -n my-app -c green,magenta \"pnpm dev:my-app\" \"pnpm dev\"",
     "dev": "pnpm  /^dev:.*/\"",
