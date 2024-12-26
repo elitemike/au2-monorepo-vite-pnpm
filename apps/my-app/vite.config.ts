@@ -13,6 +13,7 @@ export default defineConfig({
   plugins: [
     aurelia({
       useDev: true,
-    })
+    }),
+    nodePolyfills()
   ]
 });
