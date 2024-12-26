@@ -1,5 +1,7 @@
 import { defineConfig } from 'vite';
-import { nodePolyfills } from 'vite-plugin-node-polyfills'
+import { nodePolyfills } from 'vite-plugin-node-polyfills';
+//import { VitePluginCssModules } from 'vite-plugin-css-modules';
+import { patchCssModules } from 'vite-css-modules'
 import aurelia from '@aurelia/vite-plugin';
 
 export default defineConfig({
@@ -14,6 +16,8 @@ export default defineConfig({
     aurelia({
       useDev: true,
     }),
-    nodePolyfills()
+    nodePolyfills(),
+    patchCssModules()
+    // VitePluginCssModules()
   ]
 });

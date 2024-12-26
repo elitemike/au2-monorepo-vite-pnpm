@@ -3,5 +3,5 @@ import template from "./hello-world.html?raw";
 
 @customElement({ name: "hello-world", template })
 export class HelloWorld {
-  @bindable message = "from P1";
+  @bindable message = "from P1..";
 }

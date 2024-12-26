@@ -11,6 +11,8 @@
     "@aurelia/router": "latest",
     "@exper/p1": "workspace:*",
     "aurelia": "latest",
+    "vite-css-modules": "^1.8.0",
+    "vite-plugin-css-modules": "^0.0.1",
     "vite-require": "^0.2.3"
   },
   "devDependencies": {
