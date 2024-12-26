@@ -1,0 +1,57 @@
+{
+  "name": "@exper/p1",
+  "description": "An Aurelia 2 plugin.",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "???"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@aurelia/router": "latest",
+    "aurelia": "latest",
+    "npm-watch": "^0.13.0"
+  },
+  "devDependencies": {
+    "@aurelia/testing": "latest",
+    "@aurelia/webpack-loader": "latest",
+    "@types/node": "^22.10.2",
+    "autoprefixer": "^10.4.20",
+    "css-loader": "^7.1.2",
+    "dotenv-webpack": "^8.1.0",
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
+    "html-webpack-plugin": "^5.6.3",
+    "postcss": "^8.4.49",
+    "postcss-loader": "^8.1.1",
+    "style-loader": "^4.0.0",
+    "stylelint": "^16.12.0",
+    "stylelint-config-standard": "^36.0.1",
+    "ts-loader": "^9.5.1",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.1",
+    "webpack": "^5.97.1",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.2.0",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "scripts": {
+    "lint:js": "eslint src",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "lint": "npm run lint:js && npm run lint:css",
+    "pretest": "npm run lint",
+    "start": "webpack serve",
+    "build-webpack": "webpack --env production",
+    "analyze": "webpack --env production --analyze",
+    "prepare": "npm run build",
+    "build": "npx tsc --build && pnpm build:copy-other",
+    "dev": "npx tsc --watch --preserveWatchOutput",
+    "build:copy-other": "npx cpx \"./src/**/*.{html,scss,css,woff,ttf,svg,eot,woff2}\" dist"
+  }
+}
