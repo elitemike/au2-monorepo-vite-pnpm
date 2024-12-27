@@ -9,15 +9,10 @@
       "*": [
         "src/*"
       ]
-    }
+    },
   },
   "include": [
     "src",
     "../../typings.d.ts"
-  ],
-  "references": [
-    {
-      "path": "../utils"
-    }
   ]
 }

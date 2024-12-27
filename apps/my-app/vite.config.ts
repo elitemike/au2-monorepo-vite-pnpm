@@ -19,5 +19,5 @@ export default defineConfig({
     nodePolyfills(),
     patchCssModules()
     // VitePluginCssModules()
-  ]
+  ],
 });

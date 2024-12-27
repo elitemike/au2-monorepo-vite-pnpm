@@ -1,6 +1,6 @@
 {
-  "name": "@exper/p1",
-  "description": "An Aurelia 2 plugin.",
+  "name": "@exper/utils",
+  "description": "Utils module",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -13,7 +13,6 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@aurelia/router": "latest",
-    "@exper/utils": "workspace:*",
     "aurelia": "latest"
   },
   "devDependencies": {

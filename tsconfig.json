@@ -24,9 +24,22 @@
         "noUnusedParameters": true,
         "preserveWatchOutput": true,
         "removeComments": true,
-        "strictPropertyInitialization": false
+        "strictPropertyInitialization": false,
+        "composite": true,
+        "rootDir": ".",
     },
     "exclude": [
         "node_modules"
+    ],
+    "references": [
+        {
+            "path": "apps/my-app"
+        },
+        {
+            "path": "packages/p1"
+        },
+        {
+            "path": "packages/utils"
+        }
     ]
 }

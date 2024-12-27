@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf node_modules && pnpm --filter '@exper/*' clean",
     "build:my-app": "pnpm build:packages && pnpm --filter \"@exper/my-app\" build",
     "build:packages": "pnpm --filter \"./packages/**\" build",
-    "watch:my-app": "pnpm build:packages && concurrently -n my-app -c green,magenta \"pnpm dev:my-app\" \"pnpm dev\"",
-    "dev": "pnpm  /^dev:.*/\"",
-    "dev:p1": "pnpm --filter \"@exper/p1\" run --parallel /^dev:.*/",
     "dev:my-app": "pnpm --filter \"@exper/my-app\" dev",
-    "clean": "rm -rf node_modules && pnpm --filter '@exper/*' clean"
+    "dev:p1": "pnpm --filter \"@exper/p1\" run --parallel /^dev:.*/",
+    "dev:packages": "pnpm --filter  \"./packages/**\" run --parallel /^dev:.*/",
+    "watch:my-app": "concurrently -n my-app -c green \"pnpm dev:my-app\" \"pnpm dev:packages\""
   },
   "keywords": [],
   "author": "",
@@ -32,5 +32,6 @@
     "eslint-import-resolver-typescript": "latest",
     "prettier": "latest",
     "typescript": "^5.7.2"
-  }
+  },
+  "dependencies": {}
 }
