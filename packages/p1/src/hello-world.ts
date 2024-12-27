@@ -1,5 +1,6 @@
 import { bindable, customElement } from 'aurelia';
 import template from "./hello-world.html?raw";
+import "./hello-world.css";
 import { MathStuff } from "@exper/utils";
 
 @customElement({ name: "hello-world", template })

@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      '@goldstack/utils-typescript-references':
-        specifier: ^0.3.12
-        version: 0.3.12
     devDependencies:
       '@types/node':
         specifier: ^22
@@ -587,10 +583,6 @@ packages:
   '@eslint/plugin-kit@0.2.4':
     resolution: {integrity: sha512-zSkKow6H5Kdm0ZUQUB2kV5JIXqoG0+uH5YADhaEHswm664N9Db8dXSi0nMJpacpMf+MyyglF1vnZohpEg5yUtg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@goldstack/utils-typescript-references@0.3.12':
-    resolution: {integrity: sha512-5AGpRja/zHTSq5cT+A0lCXUfkEK+OWkEb7Se3LGITy3KkUTV/fYcCQ7V8aixg25iF7v4LW7SFBKDGE+LJUTgew==}
-    hasBin: true
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -3113,11 +3105,6 @@ snapshots:
     dependencies:
       levn: 0.4.1
 
-  '@goldstack/utils-typescript-references@0.3.12':
-    dependencies:
-      source-map-support: 0.5.21
-      yargs: 17.7.2
-
   '@humanfs/core@0.19.1': {}
 
   '@humanfs/node@0.16.6':
@@ -3565,7 +3552,8 @@ snapshots:
     dependencies:
       pako: 1.0.11
 
-  buffer-from@1.1.2: {}
+  buffer-from@1.1.2:
+    optional: true
 
   buffer-xor@1.0.3: {}
 
@@ -5227,8 +5215,10 @@ snapshots:
     dependencies:
       buffer-from: 1.1.2
       source-map: 0.6.1
+    optional: true
 
-  source-map@0.6.1: {}
+  source-map@0.6.1:
+    optional: true
 
   source-map@0.7.4: {}
 
