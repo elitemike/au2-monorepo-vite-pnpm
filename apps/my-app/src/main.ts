@@ -1,14 +1,9 @@
 import Aurelia from 'aurelia';
 import { MyApp } from './my-app';
-import { HelloWorld } from '@exper/p1';
+import { P1Configuration } from '@exper/p1';
 
 
-console.debug("helloworld", HelloWorld)
 Aurelia
-  .register(HelloWorld)
+  .register(P1Configuration)
   .app(MyApp)
   .start();
-
-
-let H = new HelloWorld();
-console.debug("h", H.message);
