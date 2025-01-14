@@ -7,9 +7,10 @@ import { MathStuff } from '@exper/utils';
 
 
 @customElement({ name: "hello-world", template })
-@inject(IEventAggregator)
+
 export class HelloWorld {
   private service: MockService = resolve(MockService);
+  private eventAggregator: IEventAggregator = resolve(IEventAggregator);
 
   @bindable message = "from P1..";
 
@@ -20,9 +21,15 @@ export class HelloWorld {
     this.service.startWork();
   }
 
-  constructor(private eventAggregator: IEventAggregator) {
+  constructor() {
     this.eventAggregator.subscribe(ServiceStartedEvent, (e: ServiceStartedEvent) => {
       console.debug("on work started, informed via event")
     });
   }
+
+  // constructor(private eventAggregator: IEventAggregator) {
+  //   this.eventAggregator.subscribe(ServiceStartedEvent, (e: ServiceStartedEvent) => {
+  //     console.debug("on work started, informed via event")
+  //   });
+  // }
 }
