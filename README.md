@@ -8,6 +8,5 @@ The project shows a working application that loads a plugin which is also linked
 To run the project
 ```bash
 pnpm install
-pnpm build:packages
 pnpm watch:my-app
 ```
